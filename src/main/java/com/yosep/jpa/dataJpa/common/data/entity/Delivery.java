@@ -1,7 +1,7 @@
-package com.yosep.jpa.dataJpa.data.entity;
+package com.yosep.jpa.dataJpa.common.data.entity;
 
-import com.yosep.jpa.dataJpa.data.vo.Address;
-import com.yosep.jpa.dataJpa.data.vo.DeliveryStatus;
+import com.yosep.jpa.dataJpa.common.data.vo.Address;
+import com.yosep.jpa.dataJpa.common.data.vo.DeliveryStatus;
 import lombok.Getter;
 import lombok.Setter;
 

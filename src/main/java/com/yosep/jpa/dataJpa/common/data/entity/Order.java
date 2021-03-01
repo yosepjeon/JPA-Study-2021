@@ -1,6 +1,7 @@
-package com.yosep.jpa.dataJpa.data.entity;
+package com.yosep.jpa.dataJpa.common.data.entity;
 
-import com.yosep.jpa.dataJpa.data.vo.OrderStatus;
+import com.yosep.jpa.dataJpa.common.data.vo.OrderStatus;
+import com.yosep.jpa.dataJpa.member.data.entity.User;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -21,7 +22,7 @@ public class Order {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "member_id")
-    private Member member;
+    private User member;
 
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
     private List<OrderItem> orderItems = new ArrayList<>();
@@ -35,7 +36,7 @@ public class Order {
     @Enumerated(EnumType.STRING)
     private OrderStatus status;
 
-    public void setMember(Member member) {
+    public void setMember(User member) {
         this.member = member;
         member.getOrders().add(this);
     }

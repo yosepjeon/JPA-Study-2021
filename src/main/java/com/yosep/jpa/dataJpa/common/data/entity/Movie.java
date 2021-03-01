@@ -1,4 +1,4 @@
-package com.yosep.jpa.dataJpa.data.entity;
+package com.yosep.jpa.dataJpa.common.data.entity;
 
 
 import lombok.Getter;

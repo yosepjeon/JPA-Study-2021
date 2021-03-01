@@ -13,7 +13,7 @@ import java.util.List;
 @SpringBootTest
 @Transactional
 @Commit
-public class MemberTest {
+public class UserTest {
     @PersistenceContext
     EntityManager em;
 
