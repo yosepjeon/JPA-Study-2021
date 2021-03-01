@@ -23,8 +23,6 @@ public class QuerydslPagingTest {
     @PersistenceContext
     EntityManager em;
 
-    Logger logger = LoggerFactory.getLogger(QuerydslBasicTest.class);
-
     JPAQueryFactory queryFactory;
     QMember member;
 

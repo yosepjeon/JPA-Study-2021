@@ -14,8 +14,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9da68af2-3128-4742-883d-3b7ae7a24f84" name="Default Changelist" comment="초기 설정 setting">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/yosep/jpa/querydsl/repository/QuerydslAggregationTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/yosep/jpa/querydsl/repository/QuerydslPagingTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/yosep/jpa/querydsl/repository/QuerydslJoinTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.bin" afterDir="false" />
@@ -23,16 +22,12 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.3/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.3/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/jpa-study-2021.test.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.yosep.jpa.querydsl.QueryDslApplicationTest.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/com.yosep.jpa.querydsl.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.yosep.jpa.querydsl.QueryDslApplicationTest.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/yosep/jpa/querydsl/repository/QuerydslPagingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/yosep/jpa/querydsl/repository/QuerydslPagingTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +69,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -96,13 +91,13 @@
       <recent name="$PROJECT_DIR$/src/main/java/com/yosep/jpa/querydsl" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.QuerydslAggregationTest.group">
-    <configuration name="QueryDslApplicationTest.contextLoads" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.QuerydslJoinTest.fetchJoinUse">
+    <configuration name="QuerydslJoinTest.fetchJoinNo" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.yosep.jpa.querydsl.QueryDslApplicationTest.contextLoads&quot;" />
+        <option name="scriptParameters" value="--tests &quot;com.yosep.jpa.querydsl.repository.QuerydslJoinTest.fetchJoinNo&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -118,12 +113,12 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="QuerydslAggregationTest.aggregation" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="QuerydslJoinTest.fetchJoinUse" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.yosep.jpa.querydsl.repository.QuerydslAggregationTest.aggregation&quot;" />
+        <option name="scriptParameters" value="--tests &quot;com.yosep.jpa.querydsl.repository.QuerydslJoinTest.fetchJoinUse&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -139,12 +134,12 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="QuerydslAggregationTest.group" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="QuerydslJoinTest.join" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.yosep.jpa.querydsl.repository.QuerydslAggregationTest.group&quot;" />
+        <option name="scriptParameters" value="--tests &quot;com.yosep.jpa.querydsl.repository.QuerydslJoinTest.join&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -160,12 +155,12 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="QuerydslPagingTest.paging1" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="QuerydslJoinTest.joinOnFiltering" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.yosep.jpa.querydsl.repository.QuerydslPagingTest.paging1&quot;" />
+        <option name="scriptParameters" value="--tests &quot;com.yosep.jpa.querydsl.repository.QuerydslJoinTest.joinOnFiltering&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -181,12 +176,12 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="QuerydslPagingTest.paging2" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="QuerydslJoinTest.thetaJoinTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.yosep.jpa.querydsl.repository.QuerydslPagingTest.paging2&quot;" />
+        <option name="scriptParameters" value="--tests &quot;com.yosep.jpa.querydsl.repository.QuerydslJoinTest.thetaJoinTest&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -204,11 +199,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.QuerydslAggregationTest.group" />
-        <item itemvalue="Gradle.QuerydslAggregationTest.aggregation" />
-        <item itemvalue="Gradle.QuerydslPagingTest.paging2" />
-        <item itemvalue="Gradle.QuerydslPagingTest.paging1" />
-        <item itemvalue="Gradle.QueryDslApplicationTest.contextLoads" />
+        <item itemvalue="Gradle.QuerydslJoinTest.fetchJoinUse" />
+        <item itemvalue="Gradle.QuerydslJoinTest.fetchJoinNo" />
+        <item itemvalue="Gradle.QuerydslJoinTest.joinOnFiltering" />
+        <item itemvalue="Gradle.QuerydslJoinTest.thetaJoinTest" />
+        <item itemvalue="Gradle.QuerydslJoinTest.join" />
       </list>
     </recent_temporary>
   </component>
