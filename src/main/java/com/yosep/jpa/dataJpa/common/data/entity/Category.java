@@ -1,5 +1,6 @@
 package com.yosep.jpa.dataJpa.common.data.entity;
 
+import com.yosep.jpa.dataJpa.product.data.entity.Item;
 import lombok.Getter;
 import lombok.Setter;
 
