@@ -14,24 +14,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9da68af2-3128-4742-883d-3b7ae7a24f84" name="Default Changelist" comment="페치 조인 완료">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yosep/jpa/dataJpa/data/entity/Album.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yosep/jpa/dataJpa/data/entity/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yosep/jpa/dataJpa/data/entity/Category.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yosep/jpa/dataJpa/data/entity/Delivery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yosep/jpa/dataJpa/data/entity/Item.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yosep/jpa/dataJpa/data/entity/Member.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yosep/jpa/dataJpa/data/entity/Movie.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yosep/jpa/dataJpa/data/entity/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yosep/jpa/dataJpa/data/entity/OrderItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yosep/jpa/dataJpa/data/vo/Address.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yosep/jpa/dataJpa/data/vo/DeliveryStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yosep/jpa/dataJpa/data/vo/OrderStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yosep/jpa/dataJpa/common/config/QueryDslConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yosep/jpa/dataJpa/member/repository/MemberRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yosep/jpa/dataJpa/member/repository/MemberRepositorySupport.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yosep/jpa/dataJpa/member/service/MemberService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/yosep/jpa/dataJpa/config/TestConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/yosep/jpa/dataJpa/member/service/UserServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yosep/jpa/dataJpa/data/entity/Album.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yosep/jpa/dataJpa/common/data/entity/Album.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yosep/jpa/dataJpa/data/entity/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yosep/jpa/dataJpa/common/data/entity/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yosep/jpa/dataJpa/data/entity/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yosep/jpa/dataJpa/common/data/entity/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yosep/jpa/dataJpa/data/entity/Delivery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yosep/jpa/dataJpa/common/data/entity/Delivery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yosep/jpa/dataJpa/data/entity/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yosep/jpa/dataJpa/common/data/entity/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yosep/jpa/dataJpa/data/entity/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yosep/jpa/dataJpa/member/data/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yosep/jpa/dataJpa/data/entity/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yosep/jpa/dataJpa/common/data/entity/Movie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yosep/jpa/dataJpa/data/entity/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yosep/jpa/dataJpa/common/data/entity/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yosep/jpa/dataJpa/data/entity/OrderItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yosep/jpa/dataJpa/common/data/entity/OrderItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yosep/jpa/dataJpa/data/vo/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yosep/jpa/dataJpa/common/data/vo/Address.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yosep/jpa/dataJpa/data/vo/DeliveryStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yosep/jpa/dataJpa/common/data/vo/DeliveryStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yosep/jpa/dataJpa/data/vo/OrderStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yosep/jpa/dataJpa/common/data/vo/OrderStatus.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/yosep/jpa/querydsl/data/entity/MemberTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/yosep/jpa/querydsl/data/entity/UserTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +72,23 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="jpa-study-2021" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="jpa-study-2021" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="jpa-study-2021" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="other" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="jpa-study-2021" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="querydsl" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -98,13 +132,13 @@
       <recent name="$PROJECT_DIR$/src/main/java/com/yosep/jpa/querydsl" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.QuerydslJoinTest.fetchJoinUse">
-    <configuration name="QuerydslJoinTest.fetchJoinNo" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.UserServiceTest.reduplicateMemberExceptionTest">
+    <configuration name="MemberServiceTest.joinTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.yosep.jpa.querydsl.repository.QuerydslJoinTest.fetchJoinNo&quot;" />
+        <option name="scriptParameters" value="--tests &quot;com.yosep.jpa.dataJpa.member.service.MemberServiceTest.joinTest&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -120,12 +154,12 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="QuerydslJoinTest.fetchJoinUse" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="UserServiceTest.joinTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.yosep.jpa.querydsl.repository.QuerydslJoinTest.fetchJoinUse&quot;" />
+        <option name="scriptParameters" value="--tests &quot;com.yosep.jpa.dataJpa.member.service.UserServiceTest.joinTest&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -141,12 +175,12 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="QuerydslJoinTest.join" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="UserServiceTest.reduplicateMemberExceptionTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.yosep.jpa.querydsl.repository.QuerydslJoinTest.join&quot;" />
+        <option name="scriptParameters" value="--tests &quot;com.yosep.jpa.dataJpa.member.service.UserServiceTest.reduplicateMemberExceptionTest&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -162,55 +196,55 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="QuerydslJoinTest.joinOnFiltering" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="jpa-study-2021 [cleanQuerydslSourcesDir]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.yosep.jpa.querydsl.repository.QuerydslJoinTest.joinOnFiltering&quot;" />
+        <option name="scriptParameters" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value=":test" />
+            <option value="cleanQuerydslSourcesDir" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="QuerydslJoinTest.thetaJoinTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="jpa-study-2021 [compileQuerydsl]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.yosep.jpa.querydsl.repository.QuerydslJoinTest.thetaJoinTest&quot;" />
+        <option name="scriptParameters" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value=":test" />
+            <option value="compileQuerydsl" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.QuerydslJoinTest.fetchJoinUse" />
-        <item itemvalue="Gradle.QuerydslJoinTest.fetchJoinNo" />
-        <item itemvalue="Gradle.QuerydslJoinTest.joinOnFiltering" />
-        <item itemvalue="Gradle.QuerydslJoinTest.thetaJoinTest" />
-        <item itemvalue="Gradle.QuerydslJoinTest.join" />
+        <item itemvalue="Gradle.UserServiceTest.reduplicateMemberExceptionTest" />
+        <item itemvalue="Gradle.UserServiceTest.joinTest" />
+        <item itemvalue="Gradle.jpa-study-2021 [compileQuerydsl]" />
+        <item itemvalue="Gradle.jpa-study-2021 [cleanQuerydslSourcesDir]" />
+        <item itemvalue="Gradle.MemberServiceTest.joinTest" />
       </list>
     </recent_temporary>
   </component>

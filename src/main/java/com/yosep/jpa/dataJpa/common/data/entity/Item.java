@@ -1,6 +1,5 @@
-package com.yosep.jpa.dataJpa.data.entity;
+package com.yosep.jpa.dataJpa.common.data.entity;
 
-import com.yosep.jpa.dataJpa.data.entity.Category;
 import lombok.Getter;
 import lombok.Setter;
 
