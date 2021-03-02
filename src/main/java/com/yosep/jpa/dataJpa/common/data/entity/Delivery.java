@@ -2,6 +2,7 @@ package com.yosep.jpa.dataJpa.common.data.entity;
 
 import com.yosep.jpa.dataJpa.common.data.vo.Address;
 import com.yosep.jpa.dataJpa.common.data.vo.DeliveryStatus;
+import com.yosep.jpa.dataJpa.order.data.entity.Order;
 import lombok.Getter;
 import lombok.Setter;
 

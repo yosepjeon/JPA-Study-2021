@@ -1,6 +1,6 @@
 package com.yosep.jpa.dataJpa.member.data.entity;
 
-import com.yosep.jpa.dataJpa.common.data.entity.Order;
+import com.yosep.jpa.dataJpa.order.data.entity.Order;
 import com.yosep.jpa.dataJpa.common.data.vo.Address;
 import lombok.Getter;
 import lombok.Setter;
