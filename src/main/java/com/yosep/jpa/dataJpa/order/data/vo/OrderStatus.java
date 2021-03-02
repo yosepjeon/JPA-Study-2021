@@ -1,4 +1,4 @@
-package com.yosep.jpa.dataJpa.common.data.vo;
+package com.yosep.jpa.dataJpa.order.data.vo;
 
 public enum OrderStatus {
     ORDER,
