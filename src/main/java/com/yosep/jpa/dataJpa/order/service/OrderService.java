@@ -4,14 +4,18 @@ import com.yosep.jpa.dataJpa.common.data.entity.Delivery;
 import com.yosep.jpa.dataJpa.common.data.vo.DeliveryStatus;
 import com.yosep.jpa.dataJpa.member.data.entity.User;
 import com.yosep.jpa.dataJpa.member.repository.MemberRepository;
+import com.yosep.jpa.dataJpa.order.data.dto.OrderSearchDto;
 import com.yosep.jpa.dataJpa.order.data.entity.Order;
 import com.yosep.jpa.dataJpa.order.data.entity.OrderItem;
 import com.yosep.jpa.dataJpa.order.repository.OrderRepository;
+import com.yosep.jpa.dataJpa.order.repository.OrderRepositorySupport;
 import com.yosep.jpa.dataJpa.product.data.entity.Item;
 import com.yosep.jpa.dataJpa.product.repository.ItemRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 @Service
 @Transactional(readOnly = true)
@@ -19,7 +23,12 @@ import org.springframework.transaction.annotation.Transactional;
 public class OrderService {
     private final MemberRepository memberRepository;
     private final OrderRepository orderRepository;
+    private final OrderRepositorySupport orderRepositorySupport;
     private final ItemRepository itemRepository;
+
+    public List<Order> findOrders(OrderSearchDto orderSearchDto) {
+        return orderRepositorySupport.findAll(orderSearchDto);
+    }
 
     @Transactional
     public long order(Long memberId, long itemId, int count) {
