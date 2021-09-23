@@ -2,7 +2,7 @@ package com.yosep.jpa.dataJpa.order.service;
 
 import com.yosep.jpa.dataJpa.common.data.entity.Delivery;
 import com.yosep.jpa.dataJpa.common.data.vo.DeliveryStatus;
-import com.yosep.jpa.dataJpa.member.data.entity.User;
+import com.yosep.jpa.dataJpa.member.data.entity.Member;
 import com.yosep.jpa.dataJpa.member.repository.MemberRepository;
 import com.yosep.jpa.dataJpa.order.data.dto.OrderSearchDto;
 import com.yosep.jpa.dataJpa.order.data.entity.Order;
@@ -32,7 +32,7 @@ public class OrderService {
 
     @Transactional
     public long order(Long memberId, long itemId, int count) {
-        User member = memberRepository.findOne(memberId);
+        Member member = memberRepository.findOne(memberId);
         Item item = itemRepository.findOne(itemId);
 
         Delivery delivery = new Delivery();

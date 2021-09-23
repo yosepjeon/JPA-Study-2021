@@ -2,8 +2,8 @@ package com.yosep.jpa.dataJpa.order.data.entity;
 
 import com.yosep.jpa.dataJpa.common.data.entity.Delivery;
 import com.yosep.jpa.dataJpa.common.data.vo.DeliveryStatus;
+import com.yosep.jpa.dataJpa.member.data.entity.Member;
 import com.yosep.jpa.dataJpa.order.data.vo.OrderStatus;
-import com.yosep.jpa.dataJpa.member.data.entity.User;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -24,7 +24,7 @@ public class Order {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "member_id")
-    private User member;
+    private Member member;
 
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
     private List<OrderItem> orderItems = new ArrayList<>();
@@ -38,7 +38,7 @@ public class Order {
     @Enumerated(EnumType.STRING)
     private OrderStatus status;
 
-    public void setMember(User member) {
+    public void setMember(Member member) {
         this.member = member;
         member.getOrders().add(this);
     }
@@ -53,7 +53,7 @@ public class Order {
         delivery.setOrder(this);
     }
 
-    public static Order createOrder(User member, Delivery delivery, OrderItem... orderItems) {
+    public static Order createOrder(Member member, Delivery delivery, OrderItem... orderItems) {
         Order order = new Order();
         order.setMember(member);
         order.setDelivery(delivery);

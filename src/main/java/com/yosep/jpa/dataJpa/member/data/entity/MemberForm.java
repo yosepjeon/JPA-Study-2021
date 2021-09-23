@@ -8,7 +8,7 @@ import javax.validation.constraints.NotNull;
 
 @Getter
 @Setter
-public class UserForm {
+public class MemberForm {
     @NotEmpty(message = "회원 이름은 필수 입니다.")
     private String name;
 

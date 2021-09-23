@@ -1,6 +1,6 @@
 package com.yosep.jpa.dataJpa.order.controller;
 
-import com.yosep.jpa.dataJpa.member.data.entity.User;
+import com.yosep.jpa.dataJpa.member.data.entity.Member;
 import com.yosep.jpa.dataJpa.member.service.MemberService;
 import com.yosep.jpa.dataJpa.order.data.dto.OrderSearchDto;
 import com.yosep.jpa.dataJpa.order.data.entity.Order;
@@ -26,7 +26,7 @@ public class OrderController {
 
     @GetMapping(value = "/order")
     public String createForm(Model model) {
-        List<User> members = memberService.findMembers();
+        List<Member> members = memberService.findMembers();
         List<Item> items = itemService.findItems();
 
         model.addAttribute("members", members);

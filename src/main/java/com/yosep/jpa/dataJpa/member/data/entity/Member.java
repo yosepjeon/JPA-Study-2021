@@ -1,7 +1,7 @@
 package com.yosep.jpa.dataJpa.member.data.entity;
 
-import com.yosep.jpa.dataJpa.order.data.entity.Order;
 import com.yosep.jpa.dataJpa.common.data.vo.Address;
+import com.yosep.jpa.dataJpa.order.data.entity.Order;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -10,11 +10,12 @@ import javax.validation.constraints.NotEmpty;
 import java.util.ArrayList;
 import java.util.List;
 
+
 @Entity
 @Setter
 @Getter
 @Table(name = "user")
-public class User {
+public class Member {
     @Id
     @GeneratedValue
     @Column(name = "member_id")

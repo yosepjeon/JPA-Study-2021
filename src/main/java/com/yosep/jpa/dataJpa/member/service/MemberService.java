@@ -1,8 +1,9 @@
 package com.yosep.jpa.dataJpa.member.service;
 
-import com.yosep.jpa.dataJpa.member.data.entity.User;
+import com.yosep.jpa.dataJpa.member.data.entity.Member;
 import com.yosep.jpa.dataJpa.member.repository.MemberRepository;
 import com.yosep.jpa.dataJpa.member.repository.MemberRepositorySupport;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -11,39 +12,40 @@ import java.util.List;
 
 @Service
 @Transactional(readOnly = true)
+@RequiredArgsConstructor
 public class MemberService {
 
     private final MemberRepository memberRepository;
     private final MemberRepositorySupport memberRepositorySupport;
 
-    @Autowired
-    public MemberService(MemberRepository memberRepository, MemberRepositorySupport memberRepositorySupport) {
-        this.memberRepository = memberRepository;
-        this.memberRepositorySupport = memberRepositorySupport;
-    }
-
     @Transactional
-    public long join(User user) {
-        validateDuplicateMember(user);
-        memberRepository.save(user);
+    public long join(Member member) {
+        validateDuplicateMember(member);
+        memberRepository.save(member);
 
-        return user.getId();
+        return member.getId();
     }
 
-    private void validateDuplicateMember(User user) {
-        List<User> findUsers =
-                memberRepositorySupport.findByName(user.getName());
+    private void validateDuplicateMember(Member member) {
+        List<Member> findUsers =
+                memberRepositorySupport.findByName(member.getName());
 
-        if(!findUsers.isEmpty()) {
+        if (!findUsers.isEmpty()) {
             throw new IllegalStateException("이미 존재하는 회원입니다.");
         }
     }
 
-    public List<User> findMembers() {
+    public List<Member> findMembers() {
         return memberRepositorySupport.findAll();
     }
 
-    public User findOne(long memberId) {
+    public Member findOne(long memberId) {
         return memberRepository.findOne(memberId);
+    }
+
+    @Transactional
+    public void update(Long id, String name) {
+        Member member = memberRepository.findOne(id);
+        member.setName(name);
     }
 }

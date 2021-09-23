@@ -2,7 +2,7 @@ package com.yosep.jpa.dataJpa.order.service;
 
 import com.yosep.jpa.dataJpa.common.data.vo.Address;
 import com.yosep.jpa.dataJpa.common.exception.NotEnoughStockException;
-import com.yosep.jpa.dataJpa.member.data.entity.User;
+import com.yosep.jpa.dataJpa.member.data.entity.Member;
 import com.yosep.jpa.dataJpa.order.data.entity.Order;
 import com.yosep.jpa.dataJpa.order.data.vo.OrderStatus;
 import com.yosep.jpa.dataJpa.order.repository.OrderRepository;
@@ -31,7 +31,7 @@ public class OrderServiceTest {
     @Test
     public void orderTest() throws Exception {
         // Given
-        User member = createMember();
+        Member member = createMember();
         Item item = createBook("시골 JPA", 10000, 10);
         int orderCount = 2;
 
@@ -47,8 +47,8 @@ public class OrderServiceTest {
         Assertions.assertEquals(8, item.getStockQuantity());
     }
 
-    private User createMember() {
-        User member = new User();
+    private Member createMember() {
+        Member member = new Member();
         member.setName("회원1");
         member.setAddress(new Address("서울", "강가", "123-123"));
         em.persist(member);
@@ -68,7 +68,7 @@ public class OrderServiceTest {
     @Test
     public void 상품주문_재고수량초과() throws Exception {
         // Given
-        User member = createMember();
+        Member member = createMember();
         Item item = createBook("시골 JPA", 10000, 10);
 
         int orderCount = 11;
@@ -85,7 +85,7 @@ public class OrderServiceTest {
     @Test
     public void 주문취소() {
         // Given
-        User member = createMember();
+        Member member = createMember();
         Item item = createBook("시골 JPA", 10000, 10);
         int orderCount = 2;
 

@@ -1,6 +1,6 @@
 package com.yosep.jpa.dataJpa.member.repository;
 
-import com.yosep.jpa.dataJpa.member.data.entity.User;
+import com.yosep.jpa.dataJpa.member.data.entity.Member;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
@@ -11,12 +11,12 @@ import javax.persistence.EntityManager;
 public class MemberRepository {
     private final EntityManager em;
 
-    public void save(User user) {
+    public void save(Member user) {
         em.persist(user);
     }
 
-    public User findOne(long id) {
-        return em.find(User.class, id);
+    public Member findOne(long id) {
+        return em.find(Member.class, id);
     }
 
 }
