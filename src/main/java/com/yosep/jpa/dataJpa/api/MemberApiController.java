@@ -1,4 +1,4 @@
-package com.yosep.jpa.api;
+package com.yosep.jpa.dataJpa.api;
 
 import com.yosep.jpa.dataJpa.member.data.entity.Member;
 import com.yosep.jpa.dataJpa.member.service.MemberService;
