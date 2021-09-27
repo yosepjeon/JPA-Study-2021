@@ -1,5 +1,6 @@
 package com.yosep.jpa.dataJpa.order.data.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.yosep.jpa.dataJpa.common.data.entity.Delivery;
 import com.yosep.jpa.dataJpa.common.data.vo.DeliveryStatus;
 import com.yosep.jpa.dataJpa.member.data.entity.Member;
@@ -22,6 +23,7 @@ public class Order {
     @Column(name = "order_id")
     private long id;
 
+    @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "member_id")
     private Member member;

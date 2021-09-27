@@ -1,5 +1,6 @@
 package com.yosep.jpa.dataJpa.common.data.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.yosep.jpa.dataJpa.common.data.vo.Address;
 import com.yosep.jpa.dataJpa.common.data.vo.DeliveryStatus;
 import com.yosep.jpa.dataJpa.order.data.entity.Order;
@@ -17,6 +18,7 @@ public class Delivery {
     @Column(name = "delivery_id")
     private long id;
 
+    @JsonIgnore
     @OneToOne(mappedBy = "delivery", fetch = FetchType.LAZY)
     private Order order;
 

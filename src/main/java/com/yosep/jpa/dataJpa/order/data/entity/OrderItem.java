@@ -1,5 +1,6 @@
 package com.yosep.jpa.dataJpa.order.data.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.yosep.jpa.dataJpa.product.data.entity.Item;
 import lombok.Getter;
 import lombok.Setter;
@@ -20,6 +21,7 @@ public class OrderItem {
     @JoinColumn(name = "item_id")
     private Item item;
 
+    @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "order_id")
     private Order order;
