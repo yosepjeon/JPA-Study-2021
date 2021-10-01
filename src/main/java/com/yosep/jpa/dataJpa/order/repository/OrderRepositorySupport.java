@@ -1,10 +1,12 @@
 package com.yosep.jpa.dataJpa.order.repository;
 
-import com.querydsl.core.types.Predicate;
+import com.querydsl.core.types.Projections;
 import com.querydsl.core.types.dsl.BooleanExpression;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import com.yosep.jpa.dataJpa.common.data.entity.QDelivery;
 import com.yosep.jpa.dataJpa.member.data.entity.QMember;
+import com.yosep.jpa.dataJpa.order.data.dto.OrderItemQueryDto;
+import com.yosep.jpa.dataJpa.order.data.dto.OrderQueryDto;
 import com.yosep.jpa.dataJpa.order.data.dto.OrderSearchDto;
 import com.yosep.jpa.dataJpa.order.data.dto.OrderSimpleQueryDto;
 import com.yosep.jpa.dataJpa.order.data.entity.Order;
@@ -16,6 +18,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.util.StringUtils;
 
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 @Repository
@@ -95,11 +98,83 @@ public class OrderRepositorySupport extends QuerydslRepositorySupport {
 
     }
 
+    public List<OrderQueryDto> findOrderQueryDtos() {
+        List<OrderQueryDto> result = findOrders();
+
+        // N + 1
+        result.forEach(o -> {
+            List<OrderItemQueryDto> orderItems = findOrderItems(o.getOrderId());
+            o.setOrderItems(orderItems);
+        });
+
+        return result;
+    }
+
+    public List<OrderQueryDto> findOrderQueryDtos_optimization() {
+        List<OrderQueryDto> result = findOrders();
+
+        Map<Long, List<OrderItemQueryDto>> orderItemMap = findOrderItemMap(toOrderIds(result));
+
+        result.forEach(o -> o.setOrderItems(orderItemMap.get(o.getOrderId())));
+
+        return result;
+    }
+
+    private List<Long> toOrderIds(List<OrderQueryDto> result) {
+        return result.stream()
+                .map(o -> o.getOrderId())
+                .collect(Collectors.toList());
+    }
+
+    //    Projections.bean(MemberDto.class, member.username, member.age)
+    private Map<Long, List<OrderItemQueryDto>> findOrderItemMap(List<Long> orderIds) {
+        return jpaQueryFactory
+                .select(Projections
+                        .constructor(
+                                OrderItemQueryDto.class,
+                                orderItem.order.id,
+                                orderItem.item.name,
+                                orderItem.orderPrice,
+                                orderItem.count
+                        )
+                )
+                .from(orderItem)
+                .distinct()
+                .join(orderItem.item, item)
+                .where(orderItem.order.id.in(orderIds))
+                .fetch()
+                .stream()
+                .collect(Collectors.groupingBy(OrderItemQueryDto::getOrderId));
+    }
+
     private BooleanExpression getWhereMemberNameParameter(OrderSearchDto orderSearchDto) {
         return StringUtils.hasText(orderSearchDto.getMemberName()) ? order.member.name.like(orderSearchDto.getMemberName()) : null;
     }
 
     private BooleanExpression getWhereOrderStatusParameter(OrderSearchDto orderSearchDto) {
         return orderSearchDto.getOrderStatus() != null ? order.status.eq(orderSearchDto.getOrderStatus()) : null;
+    }
+
+    private List<OrderQueryDto> findOrders() {
+        return jpaQueryFactory
+                .selectFrom(order)
+                .distinct()
+                .leftJoin(order.member, member).fetchJoin()
+                .leftJoin(order.delivery, delivery).fetchJoin()
+                .fetch()
+                .stream()
+                .map(o -> new OrderQueryDto(o.getId(), o.getMember().getName(), o.getOrderDate(), o.getStatus(), o.getDelivery().getAddress()))
+                .collect(Collectors.toList());
+    }
+
+    private List<OrderItemQueryDto> findOrderItems(Long orderId) {
+        return jpaQueryFactory
+                .selectFrom(orderItem)
+                .where(orderItem.order.id.eq(orderId))
+                .join(orderItem.item, item).fetchJoin()
+                .fetch()
+                .stream()
+                .map(oi -> new OrderItemQueryDto(oi.getOrder().getId(), oi.getItem().getName(), oi.getOrderPrice(), oi.getCount()))
+                .collect(Collectors.toList());
     }
 }

@@ -1,6 +1,7 @@
 package com.yosep.jpa.dataJpa.api;
 
 import com.yosep.jpa.dataJpa.common.data.vo.Address;
+import com.yosep.jpa.dataJpa.order.data.dto.OrderQueryDto;
 import com.yosep.jpa.dataJpa.order.data.entity.Order;
 import com.yosep.jpa.dataJpa.order.data.entity.OrderItem;
 import com.yosep.jpa.dataJpa.order.data.vo.OrderStatus;
@@ -61,6 +62,16 @@ public class OrderApiController {
                 .stream()
                 .map(OrderDto::new)
                 .collect(Collectors.toList());
+    }
+
+    @GetMapping("/api/v4/orders")
+    public List<OrderQueryDto> orderV4() {
+        return orderRepositorySupport.findOrderQueryDtos();
+    }
+
+    @GetMapping("/api/v5/orders")
+    public List<OrderQueryDto> orderV5() {
+        return orderRepositorySupport.findOrderQueryDtos_optimization();
     }
 
     @Data
