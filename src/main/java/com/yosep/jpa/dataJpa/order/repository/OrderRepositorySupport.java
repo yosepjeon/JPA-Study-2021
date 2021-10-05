@@ -126,27 +126,6 @@ public class OrderRepositorySupport extends QuerydslRepositorySupport {
                 .collect(Collectors.toList());
     }
 
-    //    Projections.bean(MemberDto.class, member.username, member.age)
-    private Map<Long, List<OrderItemQueryDto>> findOrderItemMap(List<Long> orderIds) {
-        return jpaQueryFactory
-                .select(Projections
-                        .constructor(
-                                OrderItemQueryDto.class,
-                                orderItem.order.id,
-                                orderItem.item.name,
-                                orderItem.orderPrice,
-                                orderItem.count
-                        )
-                )
-                .from(orderItem)
-                .distinct()
-                .join(orderItem.item, item)
-                .where(orderItem.order.id.in(orderIds))
-                .fetch()
-                .stream()
-                .collect(Collectors.groupingBy(OrderItemQueryDto::getOrderId));
-    }
-
     private BooleanExpression getWhereMemberNameParameter(OrderSearchDto orderSearchDto) {
         return StringUtils.hasText(orderSearchDto.getMemberName()) ? order.member.name.like(orderSearchDto.getMemberName()) : null;
     }
@@ -176,5 +155,26 @@ public class OrderRepositorySupport extends QuerydslRepositorySupport {
                 .stream()
                 .map(oi -> new OrderItemQueryDto(oi.getOrder().getId(), oi.getItem().getName(), oi.getOrderPrice(), oi.getCount()))
                 .collect(Collectors.toList());
+    }
+
+    //    Projections.bean(MemberDto.class, member.username, member.age)
+    private Map<Long, List<OrderItemQueryDto>> findOrderItemMap(List<Long> orderIds) {
+        return jpaQueryFactory
+                .select(Projections
+                        .constructor(
+                                OrderItemQueryDto.class,
+                                orderItem.order.id,
+                                orderItem.item.name,
+                                orderItem.orderPrice,
+                                orderItem.count
+                        )
+                )
+                .from(orderItem)
+                .distinct()
+                .join(orderItem.item, item)
+                .where(orderItem.order.id.in(orderIds))
+                .fetch()
+                .stream()
+                .collect(Collectors.groupingBy(OrderItemQueryDto::getOrderId));
     }
 }
