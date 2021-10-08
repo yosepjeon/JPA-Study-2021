@@ -15,7 +15,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9da68af2-3128-4742-883d-3b7ae7a24f84" name="Default Changelist" comment="컬렉션 조회 성능 최적화 완료">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yosep/jpa/dataJpa/order/repository/OrderRepositorySupport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yosep/jpa/dataJpa/order/repository/OrderRepositorySupport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yosep/jpa/dataJpa/order/data/dto/OrderItemQueryDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yosep/jpa/dataJpa/order/data/dto/OrderItemQueryDto.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -343,7 +343,14 @@
       <option name="project" value="LOCAL" />
       <updated>1633067463364</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="컬렉션 조회 성능 최적화 완료">
+      <created>1633416901548</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1633416901548</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

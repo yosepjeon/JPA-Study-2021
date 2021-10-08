@@ -1,11 +1,7 @@
 package com.yosep.jpa.dataJpa.order.data.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.yosep.jpa.dataJpa.common.data.vo.Address;
-import com.yosep.jpa.dataJpa.order.data.vo.OrderStatus;
 import lombok.Data;
-
-import java.time.LocalDateTime;
 
 @Data
 public class OrderItemQueryDto {
